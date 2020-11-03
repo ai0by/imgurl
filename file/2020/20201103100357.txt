@@ -1,0 +1,51 @@
+/**
+* 查看寄售单列表 历史单据
+* 时间戳 created_at 区间
+* 订单状态 status { 1 已完成 0 待审批 2 异常(驳回) }
+* 入货仓库 companyroom_id
+* 订单编号 search_word
+* Error Code 500CSM01 500CSM03
+* api/consignment/selectConsignmentOrderList
+*/
+
+/*
+* 寄售单 更改状态 入库 写入入库时间
+* 订单id  order_id
+* 动作   action { approve 审批通过+商品入库 reject 拒绝  }
+* Error Code 500CSM04 500CSM05
+* api/consignment/editStatus
+*/
+
+/**
+* 寄售单 开单
+* 商品信息（数组） goods_info {商品id goods_id 单位 unit_id 数量 num }
+* 单号 ordersn
+* 入库仓库 companyroom_id
+* 备注 remark
+* Error Code 500CSM06 500CSM07 500CSM08 500CSM09 500CSM10 500CSM11 500CSM12
+* api/consignment/openConsignmentOrder
+*/
+
+/**
+* 寄售单 编辑
+* 商品信息（数组） goods_info {商品id goods_id 单位 unit_id 数量 num }
+* 寄售单id id
+* 入库仓库 companyroom_id
+* 备注 remark
+* Error Code 500CSM13 ~ 500CSM19
+* api/consignment/editConsignmentOrder
+*/
+
+/**
+* 寄售单 删除
+* 寄售单id id
+* Error Code 500CSM20 500CSM21
+* api/consignment/deleteConsignmentOrder
+*/
+
+/**
+* 查看单条寄售单信息
+* 寄售单id
+* Error Code 500CSM22 500CSM23
+* api/consignment/checkConsignmentOrderDetail
+*/
